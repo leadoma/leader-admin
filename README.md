@@ -1,5 +1,7 @@
 # leader-admin
-[Leadoma](http://leadoma.com) is a tourism platform website with a focus on sell directly by tour guides. This repo contains the official source code for [Leadoma leaders panel](http://leadoma.com/auth/login.html), a panel for tour guides to define their tours and manage their passengers.
+[Leadoma](http://leadoma.com) is a tourism platform website with a focus on sell directly by tour guides.
+
+This repo contains the official source code for [Leadoma leaders panel](http://leadoma.com/auth/login.html), a panel for tour guides to define their tours and manage their passengers.
 
 
 ## Contributing
@@ -24,7 +26,7 @@ There is a thing we require from all developers for the moment.
 
 ### API, documentation
 
-Leadoma API : http://api.leadoma.com
+Leadoma API : http://api.leadoma.com/docs
 
 ## Supporting
 
