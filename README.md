@@ -4,9 +4,11 @@
 
 ## Contributing
 
-We welcome **all developers** to contribute on the project. Thank you for helping us make this project great and being a part of the Leadoma community. Here are a few guidelines that will help you along the way.
+We welcome **all developers** to contribute on the project. 
+There is a thing we require from all developers for the moment.
 
 [**Obtain your own api_id**](https://t.me/sehadi) by requesting to link.
+
 
 ### Branch Structure
 
