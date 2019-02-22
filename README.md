@@ -5,14 +5,20 @@
 ## Contributing
 
 We welcome **all developers** to contribute on the project. Thank you for helping us make this project great and being a part of the Leadoma community. Here are a few guidelines that will help you along the way.
+
 [**Obtain your own api_id**](https://t.me/sehadi) by requesting to link.
 
 ### Branch Structure
-####`master` is stable releases
-####`develop` is ongoing development without any bugs
-####`release-*` is fixing for release
-####`feature-*` is an enhancement or a feature
-####`hotfix-*` only master branch diverged with high priority  
+
+`master` is stable releases
+
+`develop` is ongoing development without any bugs
+
+`release-*` is fixing for release
+
+`feature-*` is an enhancement or a feature
+
+`hotfix-*` only master branch diverged with high priority  
 
 ### API, documentation
 
