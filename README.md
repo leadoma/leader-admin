@@ -18,6 +18,6 @@ We welcome **all developers** to contribute on the project. Thank you for helpin
 
 Leadoma API : http://api.leadoma.com
 
-## Supporting Leadoma
+## Supporting
 
 leader-admin is an MIT-licensed open source project. It's a project with ongoing development made possible thanks to your support.
