@@ -4,6 +4,7 @@ export default {
     {
         title: true,
         name: 'اطلاعات تورها',
+        path: '/tours',
     },
     {
         name: 'تورهای جدید',

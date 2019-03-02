@@ -1,16 +1,16 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import './SiderDemo.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
-  Layout, Breadcrumb, Avatar, Icon, Button
+  Layout, Breadcrumb, Avatar, Icon, Button, Dropdown, Menu
 } from 'antd';
 import SideMenu from '../components/SideMenu.js';
 import { connect } from 'react-redux';
 import * as actionsCreators from '../actions/index.js';
 import nav from '../_nav.js';
 import NewTourPage from '../views/tours/NewTourPage';
-import TourPrtPage from '../views/tours/TourPrtPage';
+import CreateTourPage from '../views/tours/CreateTourPage'
+import TourPrtPage from '../views/tours/TourPrtPage'
 import { Route, Redirect } from 'react-router-dom'
 
 
@@ -19,7 +19,6 @@ const {
 } = Layout;
 
 class SiderDemo extends React.Component {
-  loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
   state = {
       collapsed: false,
@@ -51,29 +50,29 @@ class SiderDemo extends React.Component {
   }
 
   render() {
-      console.log(this.state.item.path)
       return (
         <Layout style={{ minHeight: '100vh' }}>
           <Layout>
-            <div className="d-flex logo bg-white">
-              <Button className="btn-danger pb-1 mr-auto" onClick={this.logout}>
-                <a className="text-white">خروج از حساب</a>
-              </Button>
-              <a dir="rtl" className="pr-2"> {this.props.name} خوش آمدید!</a>
+            <div className="d-flex bg-white p-3">
+              <Dropdown overlay={menu} placement="bottomRight">
+                <Avatar className="" size={32} icon="user" />
+              </Dropdown>
+              <a className="btn-light mr-auto p-2 badge ml-2">پشتیبانی  ۶۶۸۹۵۹۶-۰۲۱</a>
+              <Breadcrumb className="text-right font-weight-bold pr-2 pt-1">
+                <Breadcrumb.Item>{this.state.item.parent}</Breadcrumb.Item>
+                <Breadcrumb.Item>{this.state.item.name}</Breadcrumb.Item>
+              </Breadcrumb>
               <Button type="primary pb-1" onClick={this.toggleCollapsed}>
                 <Icon type={this.state.collapsed ? 'menu-fold' : 'menu-unfold'} />
               </Button>
             </div>
             <Content style={{ margin: '0 16px' }}>
-              <Breadcrumb className="text-right" style={{ margin: '16px 0'}}>
-                <Breadcrumb.Item>{this.state.item.parent}</Breadcrumb.Item>
-                <Breadcrumb.Item>{this.state.item.name}</Breadcrumb.Item>
-              </Breadcrumb>
-              <Route exact path={nav.items[1].path} component={NewTourPage} />
-              <Route exact path={nav.items[2].path} component={TourPrtPage} />
-              <Redirect to={this.state.item.path} />
+              <Route exact path='/tours/create' component={CreateTourPage} />
+              <Route path={nav.items[1].path} component={NewTourPage} />
+              <Route path={nav.items[2].path} component={TourPrtPage} />
+              {/* <Redirect to={this.state.item.path} /> */}
             </Content>
-            <Footer dir='rtl' style={{ textAlign: 'center' }}>
+            <Footer dir='rtl' className="text-secondary" style={{ textAlign: 'center' }}>
               حقوق مادی و معنوی متعلق به لیدوما می‌باشد.
             </Footer>
           </Layout>
@@ -91,6 +90,14 @@ class SiderDemo extends React.Component {
       );
   }
 }
+
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <a>خروج از حساب</a>
+    </Menu.Item>
+  </Menu>
+);
 
 const mapStateToProps=(state)=>{
   return state;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Menu, Icon } from 'antd';
-import { Link } from 'react-router-dom'
-
+import { Menu, Icon} from 'antd';
+import {Link} from 'react-router-dom'
 
 class SideMenu extends Component {
      
@@ -14,6 +13,7 @@ class SideMenu extends Component {
             )
         return (
             <Menu.Item key={item.name} className='text-right' dir='rtl' onClick={() => this.props.onPathUpdate(item)}>
+                <Link to={item.path}></Link>
                 <Icon type={item.icon} />
                 <span className='p-2'>{item.name}</span>
             </Menu.Item> 
